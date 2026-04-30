@@ -10,36 +10,35 @@ body.no-scroll {
   cursor: pointer;
   font-size: 2rem;
 }
+
 .mobile-menu {
   position: fixed;
   overflow-y: auto;
   top: 70px;
   right: 0;
   width: 100%;
-  height: 85vh;
+  height: calc(100vh - 70px);
   background: #0b0b0f;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
-  padding: 2rem;
+  overflow-x: hidden;
   transform: translateX(100%);
   transition: 0.4s ease;
   display: none;
+  margin-top: 40px;
 }
 
 .mobile-menu a {
   position: relative;
   width: calc(100% - 2rem);
+  display: flex;
+  justify-content: center;
   padding: 1.5rem;
   text-decoration: none;
   color: #aaa;
   font-size: 1.2rem;
-  transition: 0.5s;
   border-radius: 10px;
   background-color: #222;
-  transition: 0.5s ease;
   box-sizing: border-box;
+  transition: 0.5s ease;
 }
 
 .mobile-menu a:hover {
@@ -48,16 +47,56 @@ body.no-scroll {
 }
 
 .mobile-menu.active {
-  transform: translateX(4%);
+  transform: translateX(0);
   display: block;
 }
 .hero.active::before,
 .hero.active::after {
   display: none;
 }
+footer.active {
+  display: none;
+}
+.mobile-menu .dropdown-menu {
+  position: relative;
+  top: 0;
+  display: block;
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  transition: all 0.6s ease;
+}
+
+.mobile-menu .dehover .dropdown-menu {
+  max-height: 1000px;
+  opacity: 1;
+}
+.mobile-menu .dehover .arrow {
+  color: white;
+}
+
+.mobile-menu .dehover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-menu .dehover svg {
+  transform: rotate(180deg);
+  transition: 0.5s ease;
+  background: none;
+  color: #aaa;
+}
+
+.mobile-menu .dropdown {
+  display: grid;
+  place-items: center;
+}
 
 .burg-footer {
-  margin-top: 510px;
+  margin-top: 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -70,7 +109,7 @@ body.no-scroll {
   color: black;
   padding: 1.5rem 2.5rem;
   border-radius: 999px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   font-weight: 600;
   text-decoration: none;
   font-size: 1rem;
@@ -85,36 +124,17 @@ body.no-scroll {
   width: 100%;
   gap: 20px;
 }
+
 .mobile-menu .dropdown .arrow {
-  margin-left: 20px;
   font-size: 23px;
-  margin-top: 25px;
-}
-.mobile-menu .dropdown-menu {
-  margin-left: 20px;
-}
-.mobile-menu.dropdown.arrow svg {
-  display: none;
+  margin-top: 38px;
+  background-color: transparent;
 }
 
 .mobile-menu .dropdown-menu a img {
-  margin-bottom: 25px;
+  transform: translateY(-10px);
 }
 
-@media (max-width: 400px) {
-  .mobile-menu .dropdown a {
-    transform: translateX(-25px);
-    max-width: 0px;
-    min-height: 140px;
-  }
-  header {
-    position: sticky;
-    z-index: 1000;
-  }
-  .des {
-    margin-left: 0;
-  }
-}
 @media (max-width: 1300px) {
   nav {
     display: none;
@@ -125,21 +145,74 @@ body.no-scroll {
   .right {
     display: none;
   }
-}
-@media (max-width: 700px) {
-  .dropdown-menu {
-    min-width: 380px;
+  .container {
+    margin-left: 20px;
   }
-}
+  .social-container a:hover::before,
+  .social-container a:hover::after,
+  .social-container .border-animation:has(a:hover)::after,
+  .social-container .border-animation:has(a:hover)::before {
+    display: none;
+  }
 
+}
 @media (max-width: 1000px) {
   .light-mode svg {
     background: none;
   }
+  .container {
+    margin-left: 6px;
+  }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 700px) {
+  .mobile-menu .dropdown-menu {
+    min-width: 380px;
+  }
+  .container {
+    margin-left: 100px;
+    gap: 15px;
+  }
+  .social-container a {
+    height: 54px;
+    width: 54px;
+  }
+}
+@media (max-width: 550px) {
+  .social-container a {
+    height: 55px;
+    width: 45px;
+  }
+  .container {
+    margin-left: 50px;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 623px) {
   .mobile-menu .dropdown-menu a img {
-    margin-bottom: 45px;
+    transform: translateY(-22px);
+  }
+}
+
+@media (max-width: 420px) {
+  .mobile-menu .dropdown a {
+    max-height: 115px;
+  }
+  .mobile-menu .dropdown-menu {
+    min-width: fit-content;
+  }
+  .col {
+    gap: 15px;
+  }
+  .lamp-design {
+    margin-left: 0;
+  }
+  header {
+    position: sticky;
+    z-index: 1000;
+  }
+  .mobile-menu .dropdown-menu a img {
+    transform: translateY(-32px);
   }
 }

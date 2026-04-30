@@ -2,19 +2,36 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   background: #0b0b0f;
   font-family: Arial, sans-serif;
   color: white;
+  box-sizing: border-box;
 }
 
 /* light-dark converter */
 
 html.light-mode {
+  filter: invert(0.85) hue-rotate(180deg);
+}
+
+/* exceptions light-dark mode -> important*/
+
+html.light-mode img {
   filter: invert(1) hue-rotate(180deg);
 }
 
+html.light-mode .dropdown-menu {
+  background-color: #000000;
+}
+
+html.light-mode nav.lin::before {
+  background-color: violet;
+}
+
 /* header */
+
 header {
   position: sticky;
   top: 0;
@@ -32,7 +49,7 @@ header.shrink {
   padding: 0.8rem 2rem;
   background: rgba(11, 13, 16, 0.65);
   backdrop-filter: blur(6px);
-  border-bottom: 4px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 4px solid rgba(224, 102, 102, 0.08);
   transition: 0.5s ease;
 }
 
@@ -48,8 +65,45 @@ header.shrink {
   margin-bottom: 12px;
 }
 
+/* lamp */
+
+.lamp-design {
+  margin-left: 50px;
+}
+
+.lamp-design {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.lamp-design svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+  background-color: #0b0b0f;
+  transition: 0.5s ease;
+}
+
+.lamp-design svg:hover {
+  transform: scale(1.3);
+}
+
+.light-mode .lamp-design .light {
+  display: none;
+}
+
+.light-mode .lamp-design .dark {
+  display: block;
+}
+
+.lamp-design .dark {
+  display: none;
+}
 
 /* naaaaaaaaaaaav */
+
 nav {
   display: flex;
   gap: 5rem;
@@ -80,33 +134,6 @@ nav .lin::before {
 
 nav .lin:hover::before {
   width: 100%;
-  transition: 0.4s ease;
-}
-
-.des {
-  margin-left: 50px;
-}
-
-.des {
-  background: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.des svg {
-  color: white;
-  width: 30px;
-  height: 30px;
-  background-color: #0b0b0f;
-  transition: 0.5s ease;
-}
-
-.des svg:hover {
-  transform: scale(1.15);
-  background-color: white;
-  color: #0b0b0f;
-  transition: 0.5s ease;
 }
 
 .right {
@@ -138,12 +165,13 @@ nav .lin:hover::before {
   transform: scale(0.95);
   transition: 0.5s ease;
 }
+
 /* meeeeeeeeeeeeeeeeeeeeenu */
+
 .arrow {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0b0b0f;
   border: none;
   color: #aaa;
   cursor: pointer;
@@ -151,7 +179,7 @@ nav .lin:hover::before {
   transition: 0.5s ease;
 }
 
-.dropdown:hover .arrow {
+nav .dropdown:hover .arrow {
   color: white;
 }
 
@@ -186,6 +214,11 @@ nav .lin:hover::before {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin: 0px 20px;
+}
+
+.dropdown.bold {
+  font-size: 100px;
 }
 
 .dropdown-menu a {
@@ -202,10 +235,11 @@ nav .lin:hover::before {
   /* background-color: rgba(128, 128, 128, 0.116); */
   transition: 0.5s;
 }
+
 .dropdown-menu a img {
   width: 25px;
   height: 25px;
-  margin-top: 2px;
+  transform: translateY(-17px);
   object-fit: contain;
 }
 
@@ -223,24 +257,26 @@ nav .lin:hover::before {
 .desc {
   font-size: 12px;
   color: #777;
+  letter-spacing: 1px;
 }
 
-.dropdown-menu a:hover {
+nav .dropdown-menu a:hover {
   background: #222;
   color: white;
 }
-.dropdown:hover .dropdown-menu {
+
+nav .dropdown:hover .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
-.dropdown:hover  .arrow svg {
+
+nav .dropdown:hover .arrow svg {
   transform: rotate(180deg);
   transition: 0.5s ease;
   background: none;
   color: #aaa;
 }
-
 
 /* maaaaaaaaaaaaaaaain */
 main section {
@@ -292,6 +328,7 @@ main section {
   filter: blur(100px);
   opacity: 0.6;
 }
+
 section.light::before,
 section.light::after {
   display: none;
@@ -299,4 +336,170 @@ section.light::after {
 
 .hero-content {
   position: relative;
+}
+
+/* foooooooooooooooter */
+
+.light-mode footer {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.social-container {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.light-mode footer .social-container {
+  background-color: #e8dfd6;
+}
+
+.social-container a {
+  position: relative;
+
+  height: 64px;
+  width: 64px;
+  background-color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  box-shadow: 1px 10px 5px rgba(255, 255, 255, 0.1);
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.light-mode footer .social-container a {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+
+.social-container svg {
+  fill: var(--accent-color);
+  height: 30px;
+}
+
+.social-container a:hover {
+  background-color: var(--accent-color);
+}
+.social-container a:hover svg {
+  fill: white;
+}
+
+.social-container a::before {
+  content: attr(--name);
+  position: absolute;
+  opacity: 0;
+  border-radius: 50px;
+  color: white;
+  background-color: white;
+  padding: 0.8rem 1.2rem;
+
+  pointer-events: none;
+  transform: translateY(0);
+  transform: rotate(35deg);
+
+  background-color: var(--accent-color);
+  transition: 0.3s cubic-bezier(0.42, 0, 0.44, 1.68);
+  z-index: 1;
+}
+
+.social-container a:hover::before {
+  opacity: 1;
+  transform: translateY(-70px) rotate(0);
+}
+
+.social-container a::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  border: 10px solid;
+  border-color: var(--accent-color) transparent transparent transparent;
+  transform: translateY(20px) rotate(35deg);
+  opacity: 0;
+  transition: 0.3s cubic-bezier(0.42, 0, 0.44, 1.68);
+}
+
+.social-container a:hover::after {
+  opacity: 1;
+  transform: translateY(-41px) rotate(0);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.social-container .border-animation {
+  height: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.social-container .border-animation::before,
+.border-animation::after {
+  --angle: 0deg;
+  content: "";
+  position: absolute;
+  background-image: conic-gradient(
+    from var(--angle),
+    red,
+    blue,
+    green,
+    yellow,
+    cyan,
+    gray,
+    transparent 150%
+  );
+  width: var(--wid);
+  height: 50px;
+  border-radius: 100px;
+  left: 50%;
+  transform: translate(-50%, 72%) rotate(35deg);
+  flex-shrink: 0;
+  animation: 2.5s spin linear infinite;
+  transition: 0.3s cubic-bezier(0.42, 0, 0.44, 1.68);
+  opacity: 0;
+  pointer-events: none;
+}
+
+html.light-mode .social-container .border-animation:has(a:hover)::after,
+html.light-mode .social-container .border-animation:has(a:hover)::before {
+  height: 52px;
+}
+html.light-mode .social-container .border-animation:has(a:hover)::before {
+  transform: translate(-50%, -34px);
+}
+
+.social-container .border-animation::after {
+  filter: blur(1.3rem);
+  transform: translate(-50%, -174%) rotate(35deg);
+}
+
+.social-container .border-animation:has(a:hover)::after {
+  opacity: 0.7;
+  transform: translate(-50%, -157px) rotate(0);
+}
+.social-container .border-animation:has(a:hover)::before {
+  opacity: 1;
+  transform: translate(-50%, -33px) rotate(0);
+}
+
+.social-container .temp {
+  opacity: 0;
+  cursor: default;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
