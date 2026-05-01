@@ -1,49 +1,46 @@
-// dark-light mode
-
-// specific
-const btoo = document.getElementById("theme-btn");
-const hero = document.getElementById("pricing");
-const dropmenu = document.getElementById("bolding");
-
-btoo.addEventListener("click", function () {
-  hero.classList.toggle("light");
-  dropmenu.classList.toggle("bold");
-});
-
 // lights everyhing
 function toggleTheme() {
   document.documentElement.classList.toggle("light-mode");
 
-  const btoo = document.getElementById("theme-btn");
   const btn = document.querySelector("theme-btn");
 
   if (document.documentElement.classList.contains("light-mode")) {
     btn.textContent = "🌙 Dark Mode";
   } else {
-    btn.textContent = "☀️ Light Mode";
+    btn.textContent = "☀️ light-Mode";
   }
 }
 
 // scroll
-window.addEventListener("scroll", function () {
-  const header = document.getElementById("header");
+const header = document.getElementById("header");
+const mobileMenu = document.getElementById("mobile-menu");
 
-  if (window.scrollY > 20) {
+function handleScroll() {
+  if (
+    window.scrollY > 20 ||
+    (mobileMenu && mobileMenu.scrollTop > 20)
+  ) {
     header.classList.add("shrink");
+    mobileMenu.classList.add("shrink")
   } else {
     header.classList.remove("shrink");
+    mobileMenu.classList.remove("shrink");
   }
-});
+}
+
+window.addEventListener("scroll", handleScroll);
+
+if (mobileMenu) {
+  mobileMenu.addEventListener("scroll", handleScroll);
+}
 
 // burger menu
 function burg() {
   const menu = document.getElementById("mobile-menu");
-  const light = document.getElementById("pricing");
   const body = document.body;
   const footer = document.getElementById("footer");
 
   menu.classList.toggle("active");
-  light.classList.toggle("active");
   body.classList.toggle("no-scroll");
   footer.classList.toggle("active");
 }

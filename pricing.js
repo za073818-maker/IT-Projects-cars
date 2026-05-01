@@ -1,3 +1,15 @@
+// dark-light mode
+
+// specific
+const btoo = document.getElementById("theme-btn");
+const hero = document.getElementById("pricing");
+
+btoo.addEventListener("click", function () {
+  hero.classList.toggle("light");
+});
+
+
+
 const carSelect = document.getElementById("carSelect");
   const bankSelect = document.getElementById("bankSelect");
   const downPaymentInput = document.getElementById("downPayment");

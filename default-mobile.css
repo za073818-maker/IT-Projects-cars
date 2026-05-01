@@ -25,7 +25,9 @@ body.no-scroll {
   display: none;
   margin-top: 40px;
 }
-
+.mobile-menu.shrink {
+  margin-top: calc(40px - 6.4px);
+}
 .mobile-menu a {
   position: relative;
   width: calc(100% - 2rem);
@@ -39,6 +41,9 @@ body.no-scroll {
   background-color: #222;
   box-sizing: border-box;
   transition: 0.5s ease;
+}
+.mobile-menu a:first-child {
+  margin-top: 20px;
 }
 
 .mobile-menu a:hover {
@@ -103,6 +108,7 @@ footer.active {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  margin-bottom: 70px;
 }
 .burg-footer .btn {
   background-color: white;
@@ -178,6 +184,11 @@ footer.active {
     width: 54px;
   }
 }
+@media (max-width: 623px) {
+  .mobile-menu .dropdown-menu a img {
+    transform: translateY(-22px);
+  }
+}
 @media (max-width: 550px) {
   .social-container a {
     height: 55px;
@@ -187,15 +198,19 @@ footer.active {
     margin-left: 50px;
     gap: 5px;
   }
-}
-
-@media (max-width: 623px) {
-  .mobile-menu .dropdown-menu a img {
-    transform: translateY(-22px);
+  .lamp-design {
+    margin-left: 0;
+    margin-right: 100%;
+    margin-bottom: 30px;
+  }
+  .burger {
+    margin-bottom: 37px;
   }
 }
 
+
 @media (max-width: 420px) {
+  
   .mobile-menu .dropdown a {
     max-height: 115px;
   }
@@ -205,13 +220,7 @@ footer.active {
   .col {
     gap: 15px;
   }
-  .lamp-design {
-    margin-left: 0;
-  }
-  header {
-    position: sticky;
-    z-index: 1000;
-  }
+  
   .mobile-menu .dropdown-menu a img {
     transform: translateY(-32px);
   }
