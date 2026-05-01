@@ -1,0 +1,99 @@
+.pricing {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.pricing-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #111;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: #1a1a1a;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: violet;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 1rem 0;
+}
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+  accent-color: violet;
+}
+/* car image placeholder */
+.car-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  background: #222;
+  margin-bottom: 1rem;
+}
+
+/* dropdowns */
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: #111;
+  color: white;
+  border: 1px solid #333;
+}
+.car-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 15px;
+  background: #222;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.car-image img.fade-out {
+  opacity: 0;
+}
+.car-specs {
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.car-specs h4 {
+  color: white;
+  margin-bottom: 5px;
+}

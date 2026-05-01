@@ -2,7 +2,7 @@
 
 // specific
 const btoo = document.getElementById("theme-btn");
-const hero = document.getElementById("her");
+const hero = document.getElementById("pricing");
 const dropmenu = document.getElementById("bolding");
 
 btoo.addEventListener("click", function () {
@@ -38,16 +38,14 @@ window.addEventListener("scroll", function () {
 // burger menu
 function burg() {
   const menu = document.getElementById("mobile-menu");
-  const light = document.getElementById("her");
+  const light = document.getElementById("pricing");
   const body = document.body;
-  const footer1 = document.getElementById("footer1");
-  const footer2 = document.getElementById("footer2");
+  const footer = document.getElementById("footer");
 
   menu.classList.toggle("active");
   light.classList.toggle("active");
   body.classList.toggle("no-scroll");
-  footer1.classList.toggle("active");
-  footer2.classList.toggle("active");
+  footer.classList.toggle("active");
 }
 
 // product button in burger menu -> removing hovering, just clicking
