@@ -1,7 +1,9 @@
 body.no-scroll {
   overflow: hidden;
 }
-
+section .active {
+  display: none;
+}
 .burger {
   display: none;
   background: none;
@@ -45,7 +47,9 @@ body.no-scroll {
 .mobile-menu a:first-child {
   margin-top: 20px;
 }
-
+.mobile-menu .dropdown-menu a  {
+  margin-top: 15px;
+}
 .mobile-menu a:hover {
   background-color: #333;
   color: white;
@@ -64,7 +68,7 @@ footer.active {
 }
 .mobile-menu .dropdown-menu {
   position: relative;
-  top: 0;
+  top: 16px;
   display: block;
   opacity: 0;
   overflow: hidden;
@@ -113,15 +117,18 @@ footer.active {
 .burg-footer .btn {
   background-color: white;
   color: black;
-  padding: 1.5rem 2.5rem;
+  padding: 1.2rem 2.5rem;
   border-radius: 999px;
-  margin-bottom: 20px;
   font-weight: 600;
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
   transition: 0.5s ease;
 }
+.burg-footer .btn a {
+  all: unset;
+}
+
 .cn {
   display: flex;
   justify-content: center;
@@ -160,7 +167,6 @@ footer.active {
   .social-container .border-animation:has(a:hover)::before {
     display: none;
   }
-
 }
 @media (max-width: 1000px) {
   .light-mode svg {
@@ -174,6 +180,9 @@ footer.active {
 @media (max-width: 700px) {
   .mobile-menu .dropdown-menu {
     min-width: 380px;
+  }
+  .mobile-menu .dropdown a {
+    min-height: 120px;
   }
   .container {
     margin-left: 100px;
@@ -210,10 +219,6 @@ footer.active {
 
 
 @media (max-width: 420px) {
-  
-  .mobile-menu .dropdown a {
-    max-height: 115px;
-  }
   .mobile-menu .dropdown-menu {
     min-width: fit-content;
   }
@@ -222,6 +227,6 @@ footer.active {
   }
   
   .mobile-menu .dropdown-menu a img {
-    transform: translateY(-32px);
+    transform: translateY(-23px);
   }
 }

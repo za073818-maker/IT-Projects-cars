@@ -2,7 +2,7 @@
 
 // specific
 const btoo = document.getElementById("theme-btn");
-const hero = document.getElementById("pricing");
+const hero = document.getElementById("her");
 
 btoo.addEventListener("click", function () {
   hero.classList.toggle("light");

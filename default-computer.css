@@ -57,7 +57,7 @@ header.shrink {
   padding: 0.8rem 2rem;
   background: rgba(11, 13, 16, 0.65);
   backdrop-filter: blur(6px);
-  border-bottom: 4px solid rgba(224, 102, 102, 0.08);
+  border-bottom: 3px solid rgba(224, 102, 102, 0.08);
   transition: 0.5s ease;
 }
 
@@ -180,6 +180,13 @@ nav .lin:hover::before {
 .right .lin:hover::before {
   width: 100%;
 }
+.right .btn a {
+  text-decoration: none;
+  color: #0b0b0f;
+}
+.right .btn a:focus {
+  color: #0b0b0f;
+}
 
 .google {
   font-size: 1rem;
@@ -202,7 +209,7 @@ nav .lin:hover::before {
 .btn:hover {
   background-color: rgb(228 228 231);
   transform: scale(0.95);
-  transition: 0.5s ease;
+
 }
 
 /* meeeeeeeeeeeeeeeeeeeeenu */
@@ -320,9 +327,13 @@ nav .dropdown:hover .arrow svg {
 
 /* maaaaaaaaaaaaaaaain */
 main section {
+  display: flex;
+  justify-content: center;
   position: relative;
   min-height: 100vh;
   background: #0b0b0f;
+  align-items: center;
+  flex-direction: column;
 }
 
 .hero::before {
@@ -381,7 +392,9 @@ section.light::after {
 .light-mode footer {
   filter: invert(1) hue-rotate(180deg);
 }
-
+footer {
+  margin-top: 40px;
+}
 .social-container {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -389,7 +402,8 @@ section.light::after {
 .container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
+  margin-left: 110px;
 }
 
 .light-mode footer .social-container {

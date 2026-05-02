@@ -39,7 +39,9 @@ function burg() {
   const menu = document.getElementById("mobile-menu");
   const body = document.body;
   const footer = document.getElementById("footer");
+  const section = document.getElementById("her");
 
+  section.classList.toggle("active");
   menu.classList.toggle("active");
   body.classList.toggle("no-scroll");
   footer.classList.toggle("active");
@@ -48,7 +50,7 @@ function burg() {
 // product button in burger menu -> removing hovering, just clicking
 function btn_drop() {
   const dbtn = document.getElementById("dbtn");
-  const parentContainer = dbtn.closest(".dropdown");
+  const drop = dbtn.closest(".dropdown");
 
-  parentContainer.classList.toggle("dehover");
+  drop.classList.toggle("dehover");
 }

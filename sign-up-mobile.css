@@ -1,0 +1,12 @@
+@media (max-width: 1300px) {
+  .login-box:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .btn-google:hover {
+    transform: scale(1);
+  }
+  .btn-primary:hover {
+    transform: scale(1);
+  }
+}

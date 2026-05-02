@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="default-computer.css" />
     <link rel="stylesheet" href="default-mobile.css" />
-    <link rel="stylesheet" href="pricing-computer.css" />
-    <link rel="stylesheet" href="pricing-mobile.css" />
-
+    <link rel="stylesheet" href="sign-up-computer.css" />
+    <link rel="stylesheet" href="sign-up-mobile.css">
     <title>Get carso for cars</title>
   </head>
   <body>
@@ -266,163 +265,42 @@
         <button class="btn"><a href="sign up.html" target="_blank">Get Started</a></button>
       </div>
     </header>
-
     <main>
-      <section class="pricing hero" id="her">
-        <h2>Pricing Plans</h2>
-
-        <div class="pricing-container">
-          <div class="card">
-            <h3>Cash</h3>
-            <p class="price"><span id="cashPrice">1,200,000</span> EGP</p>
-            <p>Pay once and own the car instantly</p>
-            <button class="btn">Buy Now</button>
-          </div>
-
-          <div class="card">
-            <h3>Installment</h3>
-
-            <!-- 🚗 Car Image Placeholder -->
-            <div class="car-image">
-              <img id="carImg" src="" alt="Car Image" />
-
-              <!-- hidden placeholders for teammates -->
-              <img
-                id="img-bmw"
-                src="images_pricing/BMW_M4.jpg"
-                style="display: none"
-              />
-
-              <img
-                id="img-bmw"
-                src="https://cdn.pixabay.com/photo/2018/03/27/21/47/bmw-3267841_640.jpg"
-                style="display: none"
-              />
-              <img
-                id="img-tesla"
-                src="https://cdn.pixabay.com/photo/2021/01/05/15/55/tesla-5891179_640.jpg"
-                style="display: none"
-              />
-              <img
-                id="img-hyundai"
-                src="https://cdn.pixabay.com/photo/2021/01/19/00/25/hyundai-5930217_640.jpg"
-                style="display: none"
-              />
-              <img
-                id="img-lamborghini"
-                src="https://cdn.pixabay.com/photo/2018/10/04/20/36/lamborghini-3724950_640.jpg"
-                style="display: none"
-              />
-              <img
-                id="img-ferrari"
-                src="https://cdn.pixabay.com/photo/2019/04/08/16/14/ferrari-4112230_640.jpg"
-                style="display: none"
-              />
-              <img
-                id="img-bugatti"
-                src="https://cdn.pixabay.com/photo/2016/02/13/11/57/bugatti-1197889_640.jpg"
-                style="display: none"
-              />
+      <section class="hero" id="her">
+        <div class="login-box">
+          <h2>GET Carso</h2>
+          <p>Create your account to get started.</p>
+          <form>
+            <div class="input-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Your Name" required />
             </div>
-            <div class="car-specs">
-              <h4>Car Specs</h4>
-
-              <p id="spec-speed">Speed:</p>
-              <p id="spec-engine">Engine:</p>
-              <p id="spec-power">Horsepower:</p>
+            <div class="input-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="name@company.com" required />
             </div>
-
-            <!-- 🚗 Car Selector -->
-            <label>Choose Car:</label>
-            <select id="carSelect">
-              <option
-                value="1200000"
-                data-car="bmw"
-                data-speed="255 km/h"
-                data-engine="3.0L TwinPower"
-                data-power="420 HP"
-              >
-                BMW M4 — 1,200,000 EGP
-              </option>
-              <option
-                value="2000000"
-                data-car="tesla"
-                data-speed="250 km/h"
-                data-engine="Dual Motor"
-                data-power="670 HP"
-              >
-                Tesla Model S — 2,000,000 EGP
-              </option>
-              <option
-                value="900000"
-                data-car="hyundai"
-                data-speed="210 km/h"
-                data-engine="2.0L Smartstream"
-                data-power="190 HP"
-              >
-                Hyundai Tucson — 900,000 EGP
-              </option>
-              <option
-                value="3500000"
-                data-car="lamborghini"
-                data-speed="325 km/h"
-                data-engine="V10"
-                data-power="640 HP"
-              >
-                Lamborghini Huracan — 3,500,000 EGP
-              </option>
-              <option
-                value="5000000"
-                data-car="ferrari"
-                data-speed="340 km/h"
-                data-engine="V8 Twin-Turbo"
-                data-power="720 HP"
-              >
-                Ferrari F8 — 5,000,000 EGP
-              </option>
-              <option
-                value="7000000"
-                data-car="bugatti"
-                data-speed="420 km/h"
-                data-engine="W16"
-                data-power="1500 HP"
-              >
-                Bugatti Chiron — 7,000,000 EGP
-              </option>
-            </select>
-
-            <!-- 🏦 Bank Selector -->
-            <label>Choose Bank:</label>
-            <select id="bankSelect">
-              <option value="0.08">CIB (8%)</option>
-              <option value="0.10">NBE (10%)</option>
-              <option value="0.12">QNB (12%)</option>
-            </select>
-
-            <!-- 💰 Down Payment -->
-            <p>Down Payment: <span id="downValue">300000</span> EGP</p>
-            <input
-              type="range"
-              min="100000"
-              max="1500000"
-              step="50000"
-              value="300000"
-              id="downPayment"
-            />
-
-            <!-- 📅 Years -->
-            <p>Years: <span id="yearsValue">5</span></p>
-            <input type="range" min="1" max="7" value="5" id="years" />
-
-            <!-- 💵 Monthly -->
-            <p>💵 Monthly : <span id="monthly">15000</span> EGP</p>
-
-            <button class="btn">Apply Now</button>
+            <div class="input-group">
+              <label>Password</label>
+              <input type="password" placeholder="••••••••" required />
+            </div>
+            <div class="input-group">
+              <label>Confirm Password</label>
+              <input type="password" placeholder="••••••••" required />
+            </div>
+            <button type="submit" class="btn-primary">Get Started</button>
+            <button type="button" class="btn-google">
+              <img
+                src="Images_sign_up/Google_Logo.png"
+              />
+              Sign up with Google
+            </button>
+          </form>
+          <div class="footer">
+            Already have an account? <a href="signin.html">Sign In</a>
           </div>
         </div>
       </section>
     </main>
-
     <footer id="footer">
       <div class="social-container">
         <div class="container">
@@ -520,7 +398,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="light-scroll-BurgerMenu.js" defer></script>
   </body>
-  <script src="light-scroll-BurgerMenu.js"></script>
-  <script src="pricing.js"></script>
 </html>
