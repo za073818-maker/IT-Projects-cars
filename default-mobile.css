@@ -230,4 +230,10 @@ footer.active {
   .mobile-menu .dropdown-menu a img {
     transform: translateY(-23px);
   }
+  header {
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+  }
 }
