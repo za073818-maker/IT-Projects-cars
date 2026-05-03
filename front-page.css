@@ -1,3 +1,7 @@
+main section {
+  overflow: hidden;
+}
+
 .showroom-title {
   font-weight: 800;
   letter-spacing: 0.3rem;
