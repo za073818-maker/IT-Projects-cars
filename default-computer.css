@@ -56,7 +56,7 @@ header {
 header.shrink {
   padding: 0.8rem 2rem;
   background: rgba(11, 13, 16, 0.65);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px);
   border-bottom: 3px solid rgba(224, 102, 102, 0.08);
   transition: 0.5s ease;
 }
@@ -97,7 +97,6 @@ header.shrink {
   color: white;
   width: 30px;
   height: 30px;
-  background-color: #0b0b0f;
   transition: 0.5s ease;
 }
 
@@ -328,10 +327,9 @@ nav .dropdown:hover .arrow svg {
 /* maaaaaaaaaaaaaaaain */
 main section {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   min-height: 100vh;
-  background: #0b0b0f;
   align-items: center;
   flex-direction: column;
 }

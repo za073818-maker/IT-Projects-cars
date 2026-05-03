@@ -1,0 +1,17 @@
+@media (max-width : 900px) {
+  .specs {
+    flex-direction: column;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 400px;
+  }
+  header {
+    min-width: 400px;
+  }
+  #footer {
+    min-width: 470px;
+  }
+}

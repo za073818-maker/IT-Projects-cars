@@ -12,27 +12,16 @@ function toggleTheme() {
 }
 
 // scroll
-const header = document.getElementById("header");
-const mobileMenu = document.getElementById("mobile-menu");
 
+const header = document.getElementById("header");
 function handleScroll() {
-  if (
-    window.scrollY > 20 ||
-    (mobileMenu && mobileMenu.scrollTop > 20)
-  ) {
+  if (window.scrollY > 20) {
     header.classList.add("shrink");
-    mobileMenu.classList.add("shrink")
   } else {
     header.classList.remove("shrink");
-    mobileMenu.classList.remove("shrink");
   }
 }
-
 window.addEventListener("scroll", handleScroll);
-
-if (mobileMenu) {
-  mobileMenu.addEventListener("scroll", handleScroll);
-}
 
 // burger menu
 function burg() {
@@ -40,11 +29,13 @@ function burg() {
   const body = document.body;
   const footer = document.getElementById("footer");
   const section = document.getElementById("her");
+  const header = document.getElementById("header");
 
   section.classList.toggle("active");
   menu.classList.toggle("active");
   body.classList.toggle("no-scroll");
   footer.classList.toggle("active");
+  header.classList.toggle("active");
 }
 
 // product button in burger menu -> removing hovering, just clicking
