@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // Execute immediately to prevent FOUC
+      (function () {
+        const savedTheme = localStorage.getItem("light-mode");
+        if (savedTheme === "true") {
+          document.documentElement.classList.add("light-mode");
+        }
+      })();
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="default-computer.css" />
@@ -64,7 +73,8 @@
         <div class="cn">
           <a href="index.html">Showcase</a>
           <a href="pricing.html">Pricing</a>
-          <a href="#">About us</a>
+          <a href="about-us.html">About us</a>
+          <a href="contact-us.html">Contact us</a>
         </div>
         <div class="dropdown">
           <span class="arrow" onclick="btn_drop()" id="dbtn">
@@ -87,7 +97,7 @@
           </span>
           <div class="dropdown-menu">
             <div class="col">
-              <a href="products-bmw-toyota.html">
+              <a href="products-bmw.html">
                 <img src="images_default/Car_brands_logos/BMW_Logo.png" />
                 <div class="text">
                   <span class="title">BMW</span>
@@ -95,7 +105,7 @@
                   <span class="desc">Sport luxury</span>
                 </div>
               </a>
-              <a href="products-bmw-toyota.html">
+              <a href="products-toyota.html">
                 <img src="images_default/Car_brands_logos/Toyota_Logo.png" />
                 <div class="text">
                   <span class="title">Toyota</span>
@@ -105,7 +115,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="products-tesla-lambur.html">
+              <a href="products-tesla.html">
                 <img src="images_default/Car_brands_logos/Tesla_Logo.png" />
                 <div class="text">
                   <span class="title">Tesla</span>
@@ -113,7 +123,7 @@
                 </div>
               </a>
 
-              <a href="products-tesla-lambur.html">
+              <a href="products-lambor.html">
                 <img
                   src="images_default/Car_brands_logos/Lamborghini_Logo.png"
                 />
@@ -124,14 +134,14 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
+              <a href="products-bugatti.html">
                 <img src="images_default/Car_brands_logos/Bugatti_Logo.png" />
                 <div class="text">
                   <span class="title">Bugatti</span>
                   <span class="desc">Hyper sport</span>
                 </div>
               </a>
-              <a href="#">
+              <a href="products-hyundai.html">
                 <img src="images_default/Car_brands_logos/Hyundai_Logo.png" />
                 <div class="text">
                   <span class="title">Hyundai</span>
@@ -160,11 +170,11 @@
         <div class="burg-footer">
           <a href="#">Sign in with Google</a>
           <button class="btn">
-            <a href="sign up.html" target="_blank">Get Started</a>
+            <a href="sign up.html">Get Started</a>
           </button>
         </div>
       </div>
-      <!-- naaaaaaaaaaav -->
+      <!-- NAAAAAAAAAAAAAAAAAAAAV -->
       <nav>
         <a class="active lin" href="index.html">Showcase</a>
         <div class="dropdown">
@@ -188,7 +198,7 @@
           </span>
           <div class="dropdown-menu">
             <div class="col">
-              <a href="products-bmw-toyota.html">
+              <a href="products-bmw.html">
                 <img src="images_default/Car_brands_logos/BMW_Logo.png" />
                 <div class="text">
                   <span class="title">BMW</span>
@@ -196,7 +206,7 @@
                   <span class="desc">Sport luxury</span>
                 </div>
               </a>
-              <a href="products-bmw-toyota.html">
+              <a href="products-toyota.html">
                 <img src="images_default/Car_brands_logos/Toyota_Logo.png" />
                 <div class="text">
                   <span class="title">Toyota</span>
@@ -206,7 +216,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="products-tesla-lambur.html">
+              <a href="products-tesla.html">
                 <img src="images_default/Car_brands_logos/Tesla_Logo.png" />
                 <div class="text">
                   <span class="title">Tesla</span>
@@ -214,7 +224,7 @@
                 </div>
               </a>
 
-              <a href="products-tesla-lambur.html">
+              <a href="products-lambor.html">
                 <img
                   src="images_default/Car_brands_logos/Lamborghini_Logo.png"
                 />
@@ -225,14 +235,14 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
+              <a href="products-bugatti.html">
                 <img src="images_default/Car_brands_logos/Bugatti_Logo.png" />
                 <div class="text">
                   <span class="title">Bugatti</span>
                   <span class="desc">Hyper sport</span>
                 </div>
               </a>
-              <a href="#">
+              <a href="products-hyundai.html">
                 <img src="images_default/Car_brands_logos/Hyundai_Logo.png" />
                 <div class="text">
                   <span class="title">Hyundai</span>
@@ -259,12 +269,13 @@
           </div>
         </div>
         <a href="pricing.html" class="lin">Pricing</a>
-        <a href="#" class="lin">About us</a>
+        <a href="about-us.html" class="lin">About us</a>
+        <a href="contact-us.html" class="lin">Contact us</a>
       </nav>
       <div class="right">
         <a href="#" class="google lin">Sign in with Google</a>
         <button class="btn">
-          <a href="sign up.html" target="_blank">Get Started</a>
+          <a href="sign up.html">Get Started</a>
         </button>
       </div>
     </header>
@@ -293,12 +304,12 @@
 
           <div class="social-proof">
             <button class="btn">
-              <a href="sign up.html" target="_blank">Get Started</a>
+              <a href="sign up.html">Get Started</a>
             </button>
             <div class="avatar">
-              <img src="images_front/users/user_1.jpg" alt="" />
-              <img src="images_front/users/user_2.jpg" alt="" />
-              <img src="images_front/users/user_3.jpg" alt="" />
+              <img src="images_front/users/user_1.jpg" />
+              <img src="images_front/users/user_2.jpg" />
+              <img src="images_front/users/user_3.jpg" />
             </div>
 
             <p class="users"><strong>+5000</strong> users</p>
@@ -307,89 +318,64 @@
         <section class="car-animation">
           <div class="img-container1">
             <div class="track">
-              <!-- tesla -->
               <div class="card">
-                <a href="products-tesla-lambur.html"
-                  ><img src="images_tesla_lambur/Tesla Cybertruck.jpeg"
-                /></a>
-                
-              </div>
-              <div class="card">
-                <a href="products-tesla-lambur.html"
-                  ><img src="images_tesla_lambur/Tesla Model 3.jpeg"
-                /></a>
-              </div>
-              <div class="card">
-                <a href="products-tesla-lambur.html"
-                  ><img src="images_tesla_lambur/Tesla model S.jpg"
-                /></a>
-              </div>
-              <div class="card">
-                <a href="products-tesla-lambur.html"
-                  ><img src="images_tesla_lambur/Tesla Model Y.jpeg"
-                /></a>
-              </div>
-              <!-- lambur -->
-              <div class="card">
-                <a href="products-tesla-lambur.html"
+                <a href="products-lambur.html"
                   ><img src="images_tesla_lambur/Lamborghini Aventador.jpeg"
                 /></a>
               </div>
               <div class="card">
-                <a href="products-tesla-lambur.html"
-                  ><img src="images_tesla_lambur/Lamborghini Countach.jpeg"
+                <a href="products-toyota.html"
+                  ><img src="images_bmw_toyota/fortuner.jpg"
                 /></a>
               </div>
               <div class="card">
-                <a href="products-tesla-lambur.html"
-                  ><img src="images_tesla_lambur/Lamborghini Huracán.jpeg"
+                <a href="products-hyundai.html"
+                  ><img src="images_bugatti_hyundai/Hyundai_i20.jpg"
                 /></a>
               </div>
               <div class="card">
-                <a href="products-tesla-lambur.html"
-                  ><img src="images_tesla_lambur/Lamborghini Miura.jpeg"
-                /></a>
-              </div>
-              <!-- bmw -->
-              <div class="card">
-                <a href="products-bmw-toyota.html"
-                  ><img src="images_bmw_toyota/m3.jpg"
+                <a href="products-tesla.html"
+                  ><img src="images_tesla_lambur/Tesla model S.jpg"
                 /></a>
               </div>
               <div class="card">
-                <a href="products-bmw-toyota.html"
-                  ><img src="images_bmw_toyota/m5.jpg"
+                <a href="products-bugatti.html"
+                  ><img src="images_bugatti_hyundai/Bugatti_Chirone.jpg"
                 /></a>
               </div>
               <div class="card">
-                <a href="products-bmw-toyota.html"
-                  ><img src="images_bmw_toyota/x6.jpg"
-                /></a>
-              </div>
-              <div class="card">
-                <a href="products-bmw-toyota.html"
-                  ><img src="images_bmw_toyota/x7.jpg"
-                /></a>
-              </div>
-              <!-- toyota -->
-              <div class="card">
-                <a href="products-bmw-toyota.html"
-                  ><img src="images_bmw_toyota/hilux.jpg"
-                /></a>
-              </div>
-              <div class="card">
-                <a href="products-bmw-toyota.html"
+                <a href="products-toyota.html"
                   ><img src="images_bmw_toyota/shas.jpg"
                 /></a>
               </div>
               <div class="card">
-                <a href="products-bmw-toyota.html"
-                  ><img src="images_bmw_toyota/tundra.jpg"
+                <a href="products-lambur.html"
+                  ><img src="images_tesla_lambur/Lamborghini Miura.jpeg"
                 /></a>
               </div>
               <div class="card">
-                <a href="products-bmw-toyota.html"
-                  ><img src="images_bmw_toyota/fortuner.jpg"
+                <a href="products-bugatti.html"
+                  ><img src="images_bugatti_hyundai/Bugatti_Veyron.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-bmw.html"
+                  ><img src="images_bmw_toyota/x7.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-tesla.html"
+                  ><img src="images_tesla_lambur/Tesla Cybertruck.jpeg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-bugatti.html"
+                  ><img src="images_bugatti_hyundai/Bugatti_Divo.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-toyota.html"
+                  ><img src="images_bmw_toyota/hilux.jpg"
                 /></a>
               </div>
             </div>
@@ -398,23 +384,64 @@
           <div class="img-container2">
             <div class="track">
               <div class="card">
-                <img src="images_pricing/BMW_M4.jpg" />
+                <a href="products-lambur.html"
+                  ><img src="images_tesla_lambur/Lamborghini Huracán.jpeg"
+                /></a>
               </div>
               <div class="card">
-                <img src="images_pricing/BMW_M4.jpg" />
+                <a href="products-hyundai.html"
+                  ><img src="images_bugatti_hyundai/Hyundai_Elentra.jpg"
+                /></a>
               </div>
               <div class="card">
-                <img src="images_pricing/BMW_M4.jpg" />
-              </div>
-
-              <div class="card">
-                <img src="images_pricing/BMW_M4.jpg" />
+                <a href="products-bmw.html"
+                  ><img src="images_bmw_toyota/m3.jpg"
+                /></a>
               </div>
               <div class="card">
-                <img src="images_pricing/BMW_M4.jpg" />
+                <a href="products-tesla.html"
+                  ><img src="images_tesla_lambur/Tesla Model 3.jpeg"
+                /></a>
               </div>
               <div class="card">
-                <img src="images_pricing/BMW_M4.jpg" />
+                <a href="products-toyota.html"
+                  ><img src="images_bmw_toyota/tundra.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-hyundai.html"
+                  ><img src="images_bugatti_hyundai/Hyundai_Accent.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-toyota.html"
+                  ><img src="images_bmw_toyota/x6.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-bugatti.html"
+                  ><img src="images_bugatti_hyundai/Bugatti_Bolide.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-bmw.html"
+                  ><img src="images_bmw_toyota/m5.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-lambor.html"
+                  ><img src="images_tesla_lambur/Lamborghini Countach.jpeg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-hyundai.html"
+                  ><img src="images_bugatti_hyundai/Hyundai_Tucson.jpg"
+                /></a>
+              </div>
+              <div class="card">
+                <a href="products-tesla.html"
+                  ><img src="images_tesla_lambur/Tesla Model Y.jpeg"
+                /></a>
               </div>
             </div>
           </div>
@@ -425,7 +452,7 @@
     <footer id="footer">
       <div class="social-container">
         <div class="container">
-          <div class="border-animation" style="--wid: 85px">
+          <div class="border-animation" style="--wid: 89px">
             <a
               href="https://www.tiktok.com"
               --name="Tiktok"
@@ -443,7 +470,7 @@
               </svg>
             </a>
           </div>
-          <div class="border-animation" style="--wid: 105px">
+          <div class="border-animation" style="--wid: 107px">
             <a
               href="https://www.youtube.com"
               --name="YouTube"
@@ -461,7 +488,7 @@
               </svg>
             </a>
           </div>
-          <div class="border-animation" style="--wid: 115px">
+          <div class="border-animation" style="--wid: 116px">
             <a
               href="https://www.instagram.com"
               --name="Instagram"
@@ -479,7 +506,7 @@
               </svg>
             </a>
           </div>
-          <div class="border-animation" style="--wid: 91px">
+          <div class="border-animation" style="--wid: 95px">
             <a
               href="https://www.X.com"
               --name="Tiwtter"
@@ -497,7 +524,7 @@
               </svg>
             </a>
           </div>
-          <div class="border-animation" style="--wid: 115px">
+          <div class="border-animation" style="--wid: 114px">
             <a
               href="https://www.facebook.com"
               --name="Facebook"
@@ -515,7 +542,6 @@
               </svg>
             </a>
           </div>
-          <a class="temp"></a>
         </div>
       </div>
     </footer>

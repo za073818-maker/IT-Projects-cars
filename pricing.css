@@ -1,8 +1,16 @@
+/* pricing section */
 .pricing {
-  padding: 5rem 2rem;
+  /* padding: 5rem 2rem; */
   text-align: center;
 }
-
+.pricing h2 {
+  font-size: 2rem;
+  background: linear-gradient(135deg, #ffffff, #b9a9ff);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.3rem;
+}
+/* cards layout */
 .pricing-container {
   display: flex;
   gap: 2rem;
@@ -10,7 +18,7 @@
   margin-top: 2rem;
   flex-wrap: wrap;
 }
-
+/* pricing card */
 .card {
   background: #111;
   padding: 2rem;
@@ -39,7 +47,7 @@ input[type="range"] {
   margin: 10px 0;
   accent-color: violet;
 }
-/* car image placeholder */
+/*  car image box where photo goes */ 
 .car-image {
   width: 100%;
   height: 180px;
@@ -48,7 +56,7 @@ input[type="range"] {
   margin-bottom: 1rem;
 }
 
-/* dropdowns */
+/* select dropdown menus(car + bank) */
 select {
   width: 100%;
   padding: 10px;
@@ -86,6 +94,7 @@ select {
 .car-image img.fade-out {
   opacity: 0;
 }
+/* specs under image */
 .car-specs {
   text-align: left;
   margin-bottom: 1rem;
@@ -99,15 +108,13 @@ select {
 }
 
 
-/* mobile */
+/* responsive ( mobile) */
 @media (max-width: 600px) {
   .pricing-container {
     flex-direction: column;
     align-items: center;
-    margin-right: 35px;
   }
-
   .card {
-    width: 90%;
+    width: 270px;
   }
 }

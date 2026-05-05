@@ -1,8 +1,9 @@
+/* mobile styles */
 body.no-scroll {
   overflow: hidden;
 }
 header.active {
-  background-color: #0b0b0f;
+  background-color: #0b0b0f !important;
   padding: 1.2rem 2rem !important;
   border-bottom: none;
 }
@@ -22,7 +23,7 @@ section .active {
 .mobile-menu {
   position: fixed;
   overflow-y: auto;
-  top: 115px;
+  top: 93px;
   right: 0;
   width: 100%;
   max-height: 100vh;
@@ -150,7 +151,12 @@ footer.active {
 .mobile-menu .dropdown-menu a img {
   transform: translateY(-10px);
 }
-@media (max-width: 1250px) {
+/* footer spacing fix */
+footer .container {
+ margin-right: 10%;
+}
+/* responsive stuff */
+@media (max-width: 1400px) {
   nav {
     display: none;
   }
@@ -160,16 +166,10 @@ footer.active {
   .right {
     display: none;
   }
-  footer .container {
-    margin-left: 20px;
-  }
 }
 @media (max-width: 1000px) {
   .light-mode svg {
     background: none;
-  }
-  .container {
-    margin-left: 6px;
   }
   .social-container a:hover::before,
   .social-container a:hover::after,
@@ -186,10 +186,6 @@ footer.active {
   .mobile-menu .dropdown a {
     min-height: 120px;
   }
-  .container {
-    margin-left: 100px;
-    gap: 15px;
-  }
   .social-container a {
     height: 54px;
     width: 54px;
@@ -199,19 +195,22 @@ footer.active {
   .mobile-menu .dropdown-menu a img {
     transform: translateY(-22px);
   }
+  footer .container {
+    margin-right: 20%;
+    gap: 15px;
+  }
 }
 @media (max-width: 550px) {
   .social-container a {
     height: 55px;
     width: 45px;
   }
-  .container {
-    margin-left: 50px;
-    gap: 5px;
+  .left .logo {
+    font-size: 1.3rem;
   }
   .lamp-design {
     margin-left: 0;
-    margin-right: 100%;
+    margin-right: 80%;
     margin-bottom: 30px;
   }
   .burger {
@@ -230,5 +229,7 @@ footer.active {
   .mobile-menu .dropdown-menu a img {
     transform: translateY(-23px);
   }
-  
+  footer .container {
+    margin-right: 32%;
+  }
 }

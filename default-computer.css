@@ -76,14 +76,13 @@ header.shrink {
   font-size: 1.8rem;
   background: linear-gradient(135deg, #ffffff, #b9a9ff);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
 }
 
 /* lamp */
 
 .lamp-design {
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .lamp-design {
@@ -120,6 +119,7 @@ header.shrink {
 
 nav {
   display: flex;
+  margin-top: 2px;
   gap: 5rem;
 }
 
@@ -208,7 +208,6 @@ nav .lin:hover::before {
 .btn:hover {
   background-color: rgb(228 228 231);
   transform: scale(0.95);
-
 }
 
 /* meeeeeeeeeeeeeeeeeeeeenu */
@@ -329,7 +328,7 @@ main section {
   display: flex;
   justify-content: flex-start;
   position: relative;
-  min-height: 100vh;
+  min-height: 70vh;
   align-items: center;
   flex-direction: column;
 }
@@ -387,11 +386,11 @@ section.light::after {
 
 /* foooooooooooooooter */
 
+footer {
+  margin-top: 50px;
+}
 .light-mode footer {
   filter: invert(1) hue-rotate(180deg);
-}
-footer {
-  margin-top: 40px;
 }
 .social-container {
   background-color: rgba(255, 255, 255, 0.1);
@@ -486,7 +485,6 @@ footer {
 }
 
 .social-container .border-animation {
-  height: 0;
   position: relative;
   display: inline-block;
 }
@@ -506,8 +504,8 @@ footer {
     gray,
     transparent 150%
   );
-  width: var(--wid);
-  height: 50px;
+  width: var(--wid) ;
+  height: 55px;
   border-radius: 100px;
   left: 50%;
   transform: translate(-50%, 72%) rotate(35deg);
@@ -533,17 +531,13 @@ html.light-mode .social-container .border-animation:has(a:hover)::before {
 
 .social-container .border-animation:has(a:hover)::after {
   opacity: 0.7;
-  transform: translate(-50%, -157px) rotate(0);
+  transform: translate(-50%, -159px) rotate(0);
 }
 .social-container .border-animation:has(a:hover)::before {
   opacity: 1;
-  transform: translate(-50%, -33px) rotate(0);
+  transform: translate(-50%, -35px) rotate(0);
 }
 
-.social-container .temp {
-  opacity: 0;
-  cursor: default;
-}
 
 @keyframes spin {
   from {

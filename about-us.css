@@ -1,0 +1,43 @@
+/* about section styles */
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* main title (might need changing later ) */
+.about h2 {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff, #b9a9ff);
+  background-clip: text;
+  color: transparent;
+}
+
+.about-text {
+  max-width: 600px;
+  margin: 10px auto;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.member {
+  background: #111;
+  padding: 1.2rem;
+  border-radius: 12px;
+  width: 200px;
+  transition: 0.2s;
+}
+
+.member:hover {
+  transform: translateY(-5px);
+}

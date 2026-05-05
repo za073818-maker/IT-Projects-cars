@@ -1,18 +1,13 @@
 // lights everyhing
 function toggleTheme() {
-  document.documentElement.classList.toggle("light-mode");
-
-  const btn = document.querySelector("theme-btn");
-
-  if (document.documentElement.classList.contains("light-mode")) {
-    btn.textContent = "🌙 Dark Mode";
-  } else {
-    btn.textContent = "☀️ light-Mode";
-  }
+  const html = document.documentElement;
+  
+  const isLight = html.classList.toggle("light-mode");
+  
+  localStorage.setItem("light-mode", isLight);
 }
 
 // scroll
-
 const header = document.getElementById("header");
 function handleScroll() {
   if (window.scrollY > 20) {

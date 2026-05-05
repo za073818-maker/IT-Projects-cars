@@ -1,17 +1,17 @@
 main section {
   overflow: hidden;
 }
-
+/* small title above cards */
 .showroom-title {
   font-weight: 800;
   letter-spacing: 0.3rem;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   background: linear-gradient(135deg, #ffffff, #b9a9ff);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
   padding: 2rem;
 }
+/* main card in the middle */
 .woundering-card {
   display: flex;
   justify-content: center;
@@ -32,11 +32,12 @@ main section {
   width: 90%;
   margin-left: 5%;
 }
-
+/* extra text under card */
 .info-2{
   padding: 2rem;
   font-size: 1.5rem;
 }
+/* users + button */
 .social-proof {
   display: flex;
   justify-content: center;
@@ -71,39 +72,36 @@ main section {
 .social-proof .users {
   background: linear-gradient(135deg, #ffffff, violet);
   background-clip: text;
-  -webkit-background-clip: text;
   color: transparent;
 }
 
 
-/* cars animation */
+/* cars animation (moving cars section) */
 .car-animation {
   overflow: hidden;
   width: 100%;
-  gap: 40px;
+  gap: 60px;
 }
 .img-container1 {
   margin-top: 20px;
 }
 .img-container1 .track {
   display: flex;
-  animation: scroll1 500s linear infinite;
   gap: 30px;
+  animation: scroll1 500s linear infinite;
 }
+/* scrolling right */
 .img-container2 .track {
   display: flex;
   gap: 30px;
   animation: scroll2 500s linear infinite;
 }
-.car-animation .img-container1:hover .track {
-  animation-play-state: paused;
-}
-.car-animation .img-container2:hover .track {
-  animation-play-state: paused;
+.img-container2 {
+  margin-bottom: 20px;
 }
 .car-animation .card {
-  min-width: 400px;
-  max-height: 270px;
+  min-width: 300px;
+  max-height: 200px;
   overflow: hidden;
   transition: 0.3s ease-in-out;
   border-radius: 20px;
@@ -121,7 +119,7 @@ main section {
 .car-animation .card:hover {
   transform: scale(1.05);
 }
-
+/* animation loop 1 */
 @keyframes scroll1 {
   0% {
     transform: translateX(0);
@@ -130,6 +128,7 @@ main section {
     transform: translateX(-50%);
   }
 }
+/* animation loop 2 */
 @keyframes scroll2 {
   0% {
     transform: translateX(0);
@@ -139,44 +138,39 @@ main section {
   }
 }
 
-.img-container1::before {
+.car-animation::before {
   position: absolute;
   content: "";
-  top: 90px;
+  top: 0;
   left: 0;
-  height: 275px;
+  height: 100%;
   width: 80px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
   z-index: 1;
 }
-.img-container1::after {
+.car-animation::after {
   position: absolute;
   content: "";
-  top: 90px;
+  top: 0;
   right: 0;
-  height: 275px;
+  height: 100%;
   width: 80px;
   background: linear-gradient(to left, rgba(0, 0, 0, 0.9), transparent);
-  z-index: 1;
-}
-.img-container2::before {
-  position: absolute;
-  content: "";
-  top: 360px;
-  left: 0;
-  height: 190px;
-  width: 80px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), transparent);
   z-index: 1;
 }
 
-.img-container2::after {
-  position: absolute;
-  content: "";
-  top: 360px;
-  right: 0;
-  height: 190px;
-  width: 80px;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.9), transparent);
-  z-index: 1;
+@media (max-width: 550px) {
+  .showroom-title {
+    font-size: 1rem;
+  }
+  .woundering-card {
+    width: 95%;
+  }
+  .car-animation .card {
+    min-width: 270px;
+    min-height: 200px;
+  }
+  .car-animation img {
+    max-width: 100%;
+  }
 }

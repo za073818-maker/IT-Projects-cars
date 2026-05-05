@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("light-mode");
+        if (savedTheme === "true") {
+          document.documentElement.classList.add("light-mode");
+        }
+      })();
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="default-computer.css" />
@@ -64,7 +72,8 @@
         <div class="cn">
           <a href="index.html">Showcase</a>
           <a href="pricing.html">Pricing</a>
-          <a href="#">About us</a>
+          <a href="about-us.html">About us</a>
+          <a href="contact-us.html">Contact us</a>
         </div>
         <div class="dropdown">
           <span class="arrow" onclick="btn_drop()" id="dbtn">
@@ -87,7 +96,7 @@
           </span>
           <div class="dropdown-menu">
             <div class="col">
-              <a href="products-bmw-toyota.html">
+              <a href="products-bmw.html">
                 <img src="images_default/Car_brands_logos/BMW_Logo.png" />
                 <div class="text">
                   <span class="title">BMW</span>
@@ -95,7 +104,7 @@
                   <span class="desc">Sport luxury</span>
                 </div>
               </a>
-              <a href="products-bmw-toyota.html">
+              <a href="products-toyota.html">
                 <img src="images_default/Car_brands_logos/Toyota_Logo.png" />
                 <div class="text">
                   <span class="title">Toyota</span>
@@ -105,7 +114,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="products-tesla-lambur.html">
+              <a href="products-tesla.html">
                 <img src="images_default/Car_brands_logos/Tesla_Logo.png" />
                 <div class="text">
                   <span class="title">Tesla</span>
@@ -113,7 +122,7 @@
                 </div>
               </a>
 
-              <a href="products-tesla-lambur.html">
+              <a href="products-lambor.html">
                 <img
                   src="images_default/Car_brands_logos/Lamborghini_Logo.png"
                 />
@@ -124,14 +133,14 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
+              <a href="products-bugatti.html">
                 <img src="images_default/Car_brands_logos/Bugatti_Logo.png" />
                 <div class="text">
                   <span class="title">Bugatti</span>
                   <span class="desc">Hyper sport</span>
                 </div>
               </a>
-              <a href="#">
+              <a href="products-hyundai.html">
                 <img src="images_default/Car_brands_logos/Hyundai_Logo.png" />
                 <div class="text">
                   <span class="title">Hyundai</span>
@@ -160,11 +169,11 @@
         <div class="burg-footer">
           <a href="#">Sign in with Google</a>
           <button class="btn">
-            <a href="sign up.html" target="_blank">Get Started</a>
+            <a href="sign up.html">Get Started</a>
           </button>
         </div>
       </div>
-      <!-- naaaaaaaaaaav -->
+      <!-- NAAAAAAAAAAAAAAAAAAAAV -->
       <nav>
         <a class="active lin" href="index.html">Showcase</a>
         <div class="dropdown">
@@ -188,7 +197,7 @@
           </span>
           <div class="dropdown-menu">
             <div class="col">
-              <a href="products-bmw-toyota.html">
+              <a href="products-bmw.html">
                 <img src="images_default/Car_brands_logos/BMW_Logo.png" />
                 <div class="text">
                   <span class="title">BMW</span>
@@ -196,7 +205,7 @@
                   <span class="desc">Sport luxury</span>
                 </div>
               </a>
-              <a href="products-bmw-toyota.html">
+              <a href="products-toyota.html">
                 <img src="images_default/Car_brands_logos/Toyota_Logo.png" />
                 <div class="text">
                   <span class="title">Toyota</span>
@@ -206,7 +215,7 @@
               </a>
             </div>
             <div class="col">
-              <a href="products-tesla-lambur.html">
+              <a href="products-tesla.html">
                 <img src="images_default/Car_brands_logos/Tesla_Logo.png" />
                 <div class="text">
                   <span class="title">Tesla</span>
@@ -214,7 +223,7 @@
                 </div>
               </a>
 
-              <a href="products-tesla-lambur.html">
+              <a href="products-lambor.html">
                 <img
                   src="images_default/Car_brands_logos/Lamborghini_Logo.png"
                 />
@@ -225,14 +234,14 @@
               </a>
             </div>
             <div class="col">
-              <a href="#">
+              <a href="products-bugatti.html">
                 <img src="images_default/Car_brands_logos/Bugatti_Logo.png" />
                 <div class="text">
                   <span class="title">Bugatti</span>
                   <span class="desc">Hyper sport</span>
                 </div>
               </a>
-              <a href="#">
+              <a href="products-hyundai.html">
                 <img src="images_default/Car_brands_logos/Hyundai_Logo.png" />
                 <div class="text">
                   <span class="title">Hyundai</span>
@@ -259,42 +268,71 @@
           </div>
         </div>
         <a href="pricing.html" class="lin">Pricing</a>
-        <a href="#" class="lin">About us</a>
+        <a href="about-us.html" class="lin">About us</a>
+        <a href="contact-us.html" class="lin">Contact us</a>
       </nav>
       <div class="right">
         <a href="#" class="google lin">Sign in with Google</a>
         <button class="btn">
-          <a href="sign up.html" target="_blank">Get Started</a>
+          <a href="sign up.html">Get Started</a>
         </button>
       </div>
     </header>
     <main>
+      <!-- sign up form -->
       <section class="hero" id="her">
         <div class="login-box">
           <h2>GET Carso</h2>
           <p>Create your account to get started.</p>
-          <form>
+          <form id="signup-form">
+            <!-- user info -->
             <div class="input-group">
               <label>Full Name</label>
-              <input type="text" placeholder="Your Name" required />
+              <input
+                type="text"
+                id="full-name"
+                placeholder="Your Name"
+                required
+              />
             </div>
             <div class="input-group">
               <label>Email Address</label>
-              <input type="email" placeholder="name@company.com" required />
+              <input
+                type="email"
+                id="email"
+                placeholder="name@company.com"
+                required
+              />
             </div>
+            <!-- Password -->
             <div class="input-group">
-              <label>Password</label>
-              <input type="password" placeholder="••••••••" required />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="new-password"
+                placeholder="••••••••••••••••"
+                required
+              />
             </div>
+
+            <!-- Confirm Password -->
             <div class="input-group">
-              <label>Confirm Password</label>
-              <input type="password" placeholder="••••••••" required />
+              <label for="confirm-password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="password_confirmation"
+                autocomplete="new-password"
+                placeholder="••••••••••••••••"
+                required
+              />
             </div>
             <button type="submit" class="btn-primary">Get Started</button>
             <button type="button" class="btn-google">
-              <img
-                src="Images_sign_up/Google_Logo.png"
-              />
+              <!-- google sign up (not real) -->
+              <img src="Images_sign_up/Google_Logo.png" />
               Sign up with Google
             </button>
           </form>
@@ -304,10 +342,11 @@
         </div>
       </section>
     </main>
+    <!-- footer -->
     <footer id="footer">
       <div class="social-container">
         <div class="container">
-          <div class="border-animation" style="--wid: 85px">
+          <div class="border-animation" style="--wid: 89px">
             <a
               href="https://www.tiktok.com"
               --name="Tiktok"
@@ -325,7 +364,7 @@
               </svg>
             </a>
           </div>
-          <div class="border-animation" style="--wid: 105px">
+          <div class="border-animation" style="--wid: 107px">
             <a
               href="https://www.youtube.com"
               --name="YouTube"
@@ -343,7 +382,7 @@
               </svg>
             </a>
           </div>
-          <div class="border-animation" style="--wid: 115px">
+          <div class="border-animation" style="--wid: 116px">
             <a
               href="https://www.instagram.com"
               --name="Instagram"
@@ -361,7 +400,7 @@
               </svg>
             </a>
           </div>
-          <div class="border-animation" style="--wid: 91px">
+          <div class="border-animation" style="--wid: 95px">
             <a
               href="https://www.X.com"
               --name="Tiwtter"
@@ -379,7 +418,7 @@
               </svg>
             </a>
           </div>
-          <div class="border-animation" style="--wid: 115px">
+          <div class="border-animation" style="--wid: 114px">
             <a
               href="https://www.facebook.com"
               --name="Facebook"
@@ -397,11 +436,11 @@
               </svg>
             </a>
           </div>
-          <a class="temp"></a>
         </div>
       </div>
     </footer>
 
     <script src="light-scroll-BurgerMenu.js" defer></script>
+    <script src="sing-up.js" defer></script>
   </body>
 </html>

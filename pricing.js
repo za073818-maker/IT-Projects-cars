@@ -1,15 +1,6 @@
-// dark-light mode
+// pricing logic + calculations
 
-// specific
-const btoo = document.getElementById("theme-btn");
-const hero = document.getElementById("her");
-
-btoo.addEventListener("click", function () {
-  hero.classList.toggle("light");
-});
-
-
-
+// main elements
 const carSelect = document.getElementById("carSelect");
   const bankSelect = document.getElementById("bankSelect");
   const downPaymentInput = document.getElementById("downPayment");
@@ -23,14 +14,39 @@ const carSelect = document.getElementById("carSelect");
   const specEngine = document.getElementById("spec-engine");
   const specPower = document.getElementById("spec-power");
 
-  // hidden images references
-  const imgBmw = document.getElementById("img-bmw");
-  const imgTesla = document.getElementById("img-tesla");
-  const imgHyundai = document.getElementById("img-hyundai");
-  const imgLamborghini = document.getElementById("img-lamborghini");
-  const imgFerrari = document.getElementById("img-ferrari");
-  const imgBugatti = document.getElementById("img-bugatti");
+  // hidden images references ( to be filled ya rgala)
+  // bmw
+  const imgBmw1 = document.getElementById("img-bmw1");
+  const imgBmw2 = document.getElementById("img-bmw2");
+  const imgBmw3 = document.getElementById("img-bmw3");
+  const imgBmw4 = document.getElementById("img-bmw4");
+  // toyota
+  const imgtoyota1 = document.getElementById("img-toyota1");
+  const imgtoyota2 = document.getElementById("img-toyota2");
+  const imgtoyota3 = document.getElementById("img-toyota3");
+  const imgtoyota4 = document.getElementById("img-toyota4");
+  // tesla
+  const imgTesla1 = document.getElementById("img-tesla1");
+  const imgTesla2 = document.getElementById("img-tesla2");
+  const imgTesla3 = document.getElementById("img-tesla3");
+  const imgTesla4 = document.getElementById("img-tesla4");
+  // lambur
+  const imgLamborghini1 = document.getElementById("img-lamborghini1");
+  const imgLamborghini2 = document.getElementById("img-lamborghini2");
+  const imgLamborghini3 = document.getElementById("img-lamborghini3");
+  const imgLamborghini4 = document.getElementById("img-lamborghini4");
+  // bugatti
+  const imgBugatti1 = document.getElementById("img-bugatti1");
+  const imgBugatti2 = document.getElementById("img-bugatti2");
+  const imgBugatti3 = document.getElementById("img-bugatti3");
+  const imgBugatti4 = document.getElementById("img-bugatti4");
+  // hyundai
+  const imgHyundai1 = document.getElementById("img-hyundai1");
+  const imgHyundai2 = document.getElementById("img-hyundai2");
+  const imgHyundai3 = document.getElementById("img-hyundai3");
+  const imgHyundai4 = document.getElementById("img-hyundai4");
 
+ // simple number animation (increase gradualily)
   function animateValue(element, start, end, duration = 400) {
     if(!element) return;
     let startTime = null;
@@ -43,17 +59,40 @@ const carSelect = document.getElementById("carSelect");
     }
     requestAnimationFrame(step);
   }
-
+ // to be filled brdo 
   function updateCarImageAndSpecs() {
     const selectedOption = carSelect.options[carSelect.selectedIndex];
     const carType = selectedOption.getAttribute("data-car");
     let imgSrc = "";
-    if(carType === "bmw") imgSrc = imgBmw.src;
-    else if(carType === "tesla") imgSrc = imgTesla.src;
-    else if(carType === "hyundai") imgSrc = imgHyundai.src;
-    else if(carType === "lamborghini") imgSrc = imgLamborghini.src;
-    else if(carType === "ferrari") imgSrc = imgFerrari.src;
-    else if(carType === "bugatti") imgSrc = imgBugatti.src;
+    if(carType === "bmw1")imgSrc = imgBmw1.src;
+    else if(carType == "bmw2") imgSrc = imgBmw2.src;
+    else if(carType == "bmw3") imgSrc = imgBmw3.src;
+    else if(carType == "bmw4") imgSrc = imgBmw4.src;
+
+    else if(carType == "toyota1") imgSrc = imgtoyota1.src;
+    else if(carType == "toyota2") imgSrc = imgtoyota2.src;
+    else if(carType == "toyota3") imgSrc = imgtoyota3.src;
+    else if(carType == "toyota4") imgSrc = imgtoyota4.src;
+
+    else if(carType === "tesla1") imgSrc = imgTesla1.src;
+    else if(carType === "tesla2") imgSrc = imgTesla2.src;
+    else if(carType === "tesla3") imgSrc = imgTesla3.src;
+    else if(carType === "tesla4") imgSrc = imgTesla4.src;
+
+    else if(carType === "lamborghini1") imgSrc = imgLamborghini1.src;
+    else if(carType === "lamborghini2") imgSrc = imgLamborghini2.src;
+    else if(carType === "lamborghini3") imgSrc = imgLamborghini3.src;
+    else if(carType === "lamborghini4") imgSrc = imgLamborghini4.src;
+    
+    else if(carType === "bugatti1") imgSrc = imgBugatti1.src;
+    else if(carType === "bugatti2") imgSrc = imgBugatti2.src;
+    else if(carType === "bugatti3") imgSrc = imgBugatti3.src;
+    else if(carType === "bugatti4") imgSrc = imgBugatti4.src;
+
+    else if(carType === "hyundai1") imgSrc = imgHyundai1.src;
+    else if(carType === "hyundai2") imgSrc = imgHyundai2.src;
+    else if(carType === "hyundai3") imgSrc = imgHyundai3.src;
+    else if(carType === "hyundai4") imgSrc = imgHyundai4.src;
     
     if(carImg && imgSrc) {
       carImg.classList.add("fade-out");
@@ -70,10 +109,11 @@ const carSelect = document.getElementById("carSelect");
     if(specEngine) specEngine.innerText = `Engine: ${engine}`;
     if(specPower) specPower.innerText = `Horsepower: ${power}`;
   }
-
+// main calculation (cash + monthly)
   function calculateInstallment() {
     const totalPrice = parseInt(carSelect.value) || 1200000;
-    // update cash price with animation
+    // update cash price with animation 
+    // might clean this later 
     const currentCash = parseInt(cashPriceSpan.innerText.replace(/,/g, "")) || 1200000;
     if(currentCash !== totalPrice) animateValue(cashPriceSpan, currentCash, totalPrice, 350);
     else cashPriceSpan.innerText = totalPrice.toLocaleString();
@@ -103,7 +143,8 @@ const carSelect = document.getElementById("carSelect");
     updateCarImageAndSpecs();
   }
 
-  // attach events
+  // update when user changes anything
+
   if(carSelect && bankSelect && downPaymentInput && yearsInput) {
     carSelect.addEventListener("change", () => {
       calculateInstallment();

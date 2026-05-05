@@ -1,0 +1,118 @@
+section h2 {
+  padding: 10px;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #ffffff, #b9a9ff);
+  letter-spacing: 0.3rem;
+  background-clip: text;
+  color: transparent;
+}
+/* form container  */
+fieldset {
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  min-width: 600px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px 5px rgba(255, 255, 255, 0.35);
+  border-color: #b9a9ff;
+}
+
+
+fieldset legend {
+  font-size: 25px;
+  background: linear-gradient(135deg, #ffffff, #b9a9ff);
+  background-clip: text;
+  color: transparent;
+}
+
+.align {
+  padding: 20px 0;
+}
+label {
+  display: block;
+  font-size: 20px;
+  padding: 5px;
+}
+
+fieldset input {
+  border: 2px solid;
+  padding: 10px;
+  width: 90%;
+  height: 25px;
+  font-size: 15px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+fieldset input:hover,
+fieldset input:focus {
+  transform: scale(1.02);
+  box-shadow: 0px 2px 10px 8px rgba(255, 255, 255, 0.3);
+}
+
+textarea {
+  width: 90%;
+  padding: 10px;
+  height: 150px;
+  border: 2px solid;
+  font-size: 17px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+textarea:hover,
+textarea:focus {
+  transform: scale(1.02);
+  box-shadow: 0px 2px 10px 8px rgba(255, 255, 255, 0.2);
+}
+/* submit button */
+section .btn1 {
+  background-color: white;
+  color: black;
+  padding: 0.625rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+section .btn1:hover {
+  background-color: rgb(228 228 231);
+  transform: scale(0.95);
+}
+/* reset button */
+section .btn2 {
+  background-color: white;
+  color: black;
+  padding: 0.625rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+section .btn2:hover {
+  background-color: rgb(228 228 231);
+  transform: scale(0.95);
+}
+
+@media (max-width: 700px) {
+  fieldset {
+    min-width: 400px;
+  }
+  fieldset label {
+    font-size: 1rem;
+  }
+  fieldset legend {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  fieldset {
+    min-width: 290px;
+  }
+  section h2 {
+    font-size: 1.8rem;
+  }
+}
