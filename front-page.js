@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     const container = track.parentElement;
     const originalCards = [...track.children];
     
-  // number of times we repeat cards
+  // number of times we repeat animition to not get to be awful
     const loop = 9;
 
     for (let i = 1; i < loop; i++) {

@@ -40,21 +40,10 @@
 
 input[type="range"] {
   width: 100%;
-  margin: 1rem 0;
-}
-input[type="range"] {
-  width: 100%;
   margin: 10px 0;
   accent-color: violet;
 }
-/*  car image box where photo goes */ 
-.car-image {
-  width: 100%;
-  height: 180px;
-  border-radius: 15px;
-  background: #222;
-  margin-bottom: 1rem;
-}
+
 
 /* select dropdown menus(car + bank) */
 select {
@@ -66,6 +55,7 @@ select {
   color: white;
   border: 1px solid #333;
 }
+/*  car image box where photo goes */
 .car-image {
   width: 100%;
   height: 180px;
@@ -78,11 +68,6 @@ select {
   overflow: hidden;
 }
 
-.car-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .car-image img {
   width: 100%;
   height: 100%;
